@@ -146,6 +146,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Automobile.cpp" />
+    <ClCompile Include="BigList.cpp" />
+    <ClCompile Include="LittleList.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Automobile.h" />
+    <ClInclude Include="BigList.h" />
+    <ClInclude Include="LittleList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
