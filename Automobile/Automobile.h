@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "tinyxml.h"
 
 using namespace std;
 
@@ -19,5 +20,8 @@ public:
 	int getK();
 	~Automobile();
 	Automobile(string m, string rN, int d, int y, double p);
+	Automobile(TiXmlElement* element);
+	TiXmlElement* SaveXML();
+	string getMark();
 };
 

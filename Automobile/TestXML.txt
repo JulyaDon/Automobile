@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<LittleRoot>
+    <Automobile key="585">
+        <mark>FirstA</mark>
+        <regNumber>FirstNumber</regNumber>
+        <doors>1</doors>
+        <year>1</year>
+        <price>1.000000</price>
+    </Automobile>
+    <Automobile key="718">
+        <mark>SecondA1</mark>
+        <regNumber>SecondNumber</regNumber>
+        <doors>2</doors>
+        <year>2</year>
+        <price>2.000000</price>
+    </Automobile>
+    <Automobile key="572">
+        <mark>ThirdA</mark>
+        <regNumber>ThirdNumber</regNumber>
+        <doors>3</doors>
+        <year>3</year>
+        <price>3.000000</price>
+    </Automobile>
+</LittleRoot>

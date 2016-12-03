@@ -8,7 +8,7 @@ private:
 	
 public:
 	LittleList();//1. Создание пустого списка
-	~LittleList();
+	~LittleList();//6. Уничтожение списка
 	void AddStart(Automobile element); //2.1 Добавление элемента в начало списка
 	void AddEnd(Automobile element); //2.2 Добавление элемента в конец списка
 	void AddNumber(Automobile element, int number); //2.3 Добавление элемента после элемента с заданным номером
@@ -18,5 +18,8 @@ public:
 	void DeleteEnd(); //4.2 Удаление элемента из конца списка
 	void DeleteByNumber(int number); //4.3 Удаление элемента с заданным номером
 	void DeleteByKey(int K); //4.4 Удаление элемента с заданным ключом
+	TiXmlElement* SaveLittleListXml(); //5 Запись списка в файл
+	LittleList(TiXmlElement* element);
+	void sorByMark();
 };
 

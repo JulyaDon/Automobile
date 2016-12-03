@@ -11,6 +11,7 @@ LittleList::LittleList()
 
 LittleList::~LittleList()
 {
+	delete MyAutomobile;
 }
 
 void LittleList::AddStart(Automobile element)
@@ -108,4 +109,29 @@ void LittleList::DeleteByKey(int K)
 		return;
 	}
 	MyAutomobile->erase(deletePosition);
+}
+
+TiXmlElement * LittleList::SaveLittleListXml()
+{
+	TiXmlElement* root = new TiXmlElement("LittleRoot");
+	for (auto it = MyAutomobile->begin(); it !=MyAutomobile->end(); it++)
+	{
+		root->LinkEndChild(it->SaveXML());
+	}
+	return root;
+}
+
+LittleList::LittleList(TiXmlElement * element)
+{
+	MyAutomobile = new list<Automobile>();
+	TiXmlElement *currentElement = element->FirstChildElement();
+	for (; currentElement; currentElement=currentElement->NextSiblingElement())
+	{
+		MyAutomobile->push_back(Automobile(currentElement));
+	}
+}
+
+void LittleList::sorByMark()
+{
+	
 }

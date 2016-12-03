@@ -17,6 +17,22 @@ int main() {
 	//myLittleList.DeleteEnd();
 	//myLittleList.DeleteByNumber(1);
 	//myLittleList.DeleteByKey(55);
+	/*TiXmlDocument doc;
+	TiXmlDeclaration *decl = new TiXmlDeclaration("1.0", "", "");
+	TiXmlElement *element = myLittleList.SaveLittleListXml();
+	doc.LinkEndChild(decl);
+	doc.LinkEndChild(element);
+	doc.SaveFile("TestXML.txt");*/
+	TiXmlDocument doc("TestXML.txt");
+	doc.LoadFile();
+	TiXmlHandle hDoc(&doc);
+	TiXmlElement* element = hDoc.FirstChild("LittleRoot").ToElement();
+	LittleList myNewLittleList(element);
+	//Automobile autom(element);
+
+
+	cout << "End!" << endl;
+
 	int a = 0;
 	_getch();
 	return 0;
